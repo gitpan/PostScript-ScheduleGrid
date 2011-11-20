@@ -18,7 +18,7 @@ package PostScript::ScheduleGrid::Types;
 #---------------------------------------------------------------------
 
 our $VERSION = '0.01';
-# This file is part of PostScript-ScheduleGrid 0.01 (November 11, 2011)
+# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
 
 use MooseX::Types -declare => [qw(
   BWColor Color Dimension FontMetrics RGBColor RGBColorHex Style
@@ -92,8 +92,8 @@ PostScript::ScheduleGrid::Types - type library for PostScript::ScheduleGrid
 =head1 VERSION
 
 This document describes version 0.01 of
-PostScript::ScheduleGrid::Types, released November 11, 2011
-as part of PostScript-ScheduleGrid version 0.01.
+PostScript::ScheduleGrid::Types, released November 20, 2011
+as part of PostScript-ScheduleGrid version 0.02.
 
 =head1 DESCRIPTION
 

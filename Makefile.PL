@@ -27,7 +27,7 @@ my %WriteMakefileArgs = (
     "Class::MOP" => 0,
     "DateTime" => 0,
     "DateTime::TimeZone" => 0,
-    "List::Util" => 0,
+    "List::Util" => "1.20",
     "Moose" => 0,
     "Moose::Role" => 0,
     "Moose::Util::TypeConstraints" => 0,
@@ -38,7 +38,7 @@ my %WriteMakefileArgs = (
     "PostScript::File" => "2.11",
     "namespace::autoclean" => 0
   },
-  "VERSION" => "0.01",
+  "VERSION" => "0.02",
   "test" => {
     "TESTS" => "t/*.t"
   }

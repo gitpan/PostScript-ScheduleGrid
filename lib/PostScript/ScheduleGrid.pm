@@ -17,8 +17,8 @@ package PostScript::ScheduleGrid;
 # ABSTRACT: Print a schedule in a grid format
 #---------------------------------------------------------------------
 
-our $VERSION = '0.01';
-# This file is part of PostScript-ScheduleGrid 0.01 (November 11, 2011)
+our $VERSION = '0.02';
+# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
 
 use 5.010;
 use Moose;
@@ -30,7 +30,7 @@ use PostScript::ScheduleGrid::Types ':all';
 use Class::MOP ();              # for load_class
 use DateTime ();
 use DateTime::TimeZone ();
-use List::Util qw(max min);
+use List::Util 1.20 qw(max min); # support overloaded comparisons
 use POSIX qw(floor);
 use PostScript::File 2.11 qw(str); # Need improved word wrapping
 
@@ -314,6 +314,8 @@ has ps => (
   lazy_build => 1,
   handles    => ['output'],
 );
+
+*get__PostScript_File = \&ps;   # Alias for PostScript::Convert
 
 sub _build_ps
 {
@@ -885,9 +887,9 @@ PostScript::ScheduleGrid - Print a schedule in a grid format
 
 =head1 VERSION
 
-This document describes version 0.01 of
-PostScript::ScheduleGrid, released November 11, 2011
-as part of PostScript-ScheduleGrid version 0.01.
+This document describes version 0.02 of
+PostScript::ScheduleGrid, released November 20, 2011
+as part of PostScript-ScheduleGrid version 0.02.
 
 =head1 SYNOPSIS
 
@@ -939,6 +941,10 @@ it for actual TV listings, you should look at
 L<PostScript::ScheduleGrid::XMLTV>, which creates a
 PostScript::ScheduleGrid from TV listings data gathered by
 L<XMLTV>. L<http://xmltv.org>)
+
+If you want to save the schedule as a PDF, you can pass a ScheduleGrid
+object to L<PostScript::Convert/psconvert> (instead of calling the
+C<output> method).
 
 =head1 ATTRIBUTES
 
@@ -1217,6 +1223,7 @@ from L<XMLTV>.
 
 =for Pod::Coverage
 ^BUILD$
+get__PostScript_File
 
 =head1 DIAGNOSTICS
 

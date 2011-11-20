@@ -18,7 +18,7 @@ package PostScript::ScheduleGrid::Style::Stripe;
 #---------------------------------------------------------------------
 
 our $VERSION = '0.01';
-# This file is part of PostScript-ScheduleGrid 0.01 (November 11, 2011)
+# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
 
 use 5.010;
 use Moose;
@@ -135,8 +135,8 @@ PostScript::ScheduleGrid::Style::Stripe - Striped background style
 =head1 VERSION
 
 This document describes version 0.01 of
-PostScript::ScheduleGrid::Style::Stripe, released November 11, 2011
-as part of PostScript-ScheduleGrid version 0.01.
+PostScript::ScheduleGrid::Style::Stripe, released November 20, 2011
+as part of PostScript-ScheduleGrid version 0.02.
 
 =head1 DESCRIPTION
 
