@@ -18,7 +18,7 @@ package PostScript::ScheduleGrid::Role::Style;
 #---------------------------------------------------------------------
 
 our $VERSION = '0.01';
-# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
+# This file is part of PostScript-ScheduleGrid 0.03 (May 11, 2013)
 
 use 5.010;
 use Moose::Role;
@@ -57,8 +57,8 @@ PostScript::ScheduleGrid::Role::Style - Something that customizes a cell's appea
 =head1 VERSION
 
 This document describes version 0.01 of
-PostScript::ScheduleGrid::Role::Style, released November 20, 2011
-as part of PostScript-ScheduleGrid version 0.02.
+PostScript::ScheduleGrid::Role::Style, released May 11, 2013
+as part of PostScript-ScheduleGrid version 0.03.
 
 =head1 DESCRIPTION
 
@@ -148,7 +148,7 @@ L<< http://github.com/madsen/postscript-schedulegrid >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Christopher J. Madsen.
+This software is copyright (c) 2013 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

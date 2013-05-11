@@ -1,4 +1,4 @@
-PostScript::ScheduleGrid version 0.02, released November 20, 2011
+PostScript::ScheduleGrid version 0.03, released May 11, 2013
 
 
 This module creates a printable schedule of events (using PostScript)
@@ -24,7 +24,7 @@ DEPENDENCIES
 
   Package                       Minimum Version
   ----------------------------- ---------------
-  perl                           5.010
+  perl                           5.10.0
   Class::MOP                     
   DateTime                       
   DateTime::TimeZone             
@@ -42,17 +42,19 @@ DEPENDENCIES
 
 
 CHANGES
-    Here's what's new in version 0.02 of PostScript::ScheduleGrid:
+    Here's what's new in version 0.03 of PostScript::ScheduleGrid:
     (See the file "Changes" for the full revision history.)
 
-	- Add get__PostScript_File method for PostScript::Convert compatibility
-	- Require List::Util 1.20 (DateTime overloads comparison operators)
+	- Clean up type library
+	- Improve documentation
+	- Warn about conflict between MooseX::Types 0.32 and greater
+	  with Moose versions before 2.0800
 
 
 
 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Christopher J. Madsen.
+This software is copyright (c) 2013 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

@@ -17,8 +17,8 @@ package PostScript::ScheduleGrid::Types;
 # ABSTRACT: type library for PostScript::ScheduleGrid
 #---------------------------------------------------------------------
 
-our $VERSION = '0.01';
-# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
+our $VERSION = '0.03';
+# This file is part of PostScript-ScheduleGrid 0.03 (May 11, 2013)
 
 use MooseX::Types -declare => [qw(
   BWColor Color Dimension FontMetrics RGBColor RGBColorHex Style
@@ -28,11 +28,9 @@ use MooseX::Types::Moose qw(ArrayRef Num Str);
 
 use POSIX qw(floor modf);
 
-subtype FontMetrics,
-  as class_type('PostScript::File::Metrics');
+class_type FontMetrics, { class => 'PostScript::File::Metrics' };
 
-subtype Style,
-  as role_type('PostScript::ScheduleGrid::Role::Style');
+role_type Style, { role => 'PostScript::ScheduleGrid::Role::Style' };
 
 #---------------------------------------------------------------------
 subtype Dimension,
@@ -91,9 +89,9 @@ PostScript::ScheduleGrid::Types - type library for PostScript::ScheduleGrid
 
 =head1 VERSION
 
-This document describes version 0.01 of
-PostScript::ScheduleGrid::Types, released November 20, 2011
-as part of PostScript-ScheduleGrid version 0.02.
+This document describes version 0.03 of
+PostScript::ScheduleGrid::Types, released May 11, 2013
+as part of PostScript-ScheduleGrid version 0.03.
 
 =head1 DESCRIPTION
 
@@ -141,7 +139,7 @@ L<< http://github.com/madsen/postscript-schedulegrid >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Christopher J. Madsen.
+This software is copyright (c) 2013 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

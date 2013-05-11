@@ -17,8 +17,8 @@ package PostScript::ScheduleGrid;
 # ABSTRACT: Print a schedule in a grid format
 #---------------------------------------------------------------------
 
-our $VERSION = '0.02';
-# This file is part of PostScript-ScheduleGrid 0.02 (November 20, 2011)
+our $VERSION = '0.03';
+# This file is part of PostScript-ScheduleGrid 0.03 (May 11, 2013)
 
 use 5.010;
 use Moose;
@@ -887,9 +887,9 @@ PostScript::ScheduleGrid - Print a schedule in a grid format
 
 =head1 VERSION
 
-This document describes version 0.02 of
-PostScript::ScheduleGrid, released November 20, 2011
-as part of PostScript-ScheduleGrid version 0.02.
+This document describes version 0.03 of
+PostScript::ScheduleGrid, released May 11, 2013
+as part of PostScript-ScheduleGrid version 0.03.
 
 =head1 SYNOPSIS
 
@@ -941,6 +941,18 @@ it for actual TV listings, you should look at
 L<PostScript::ScheduleGrid::XMLTV>, which creates a
 PostScript::ScheduleGrid from TV listings data gathered by
 L<XMLTV>. L<http://xmltv.org>)
+
+A schedule is comprised of resources in which events take place at
+specified times.  For a television schedule, each TV channel is a
+resource, and each show is an event.  For a conference, each meeting
+room is a resource, and each talk is an event.
+
+The printed grid has a row for each resource, with times as columns.
+The position and size of an event indicates the time it begins and
+ends, as well as which resource it's associated with.  It's not
+possible for an event to be associated with more than one resource.
+If you need that, you can simulate it by assigning similar events to
+each resource.
 
 If you want to save the schedule as a PDF, you can pass a ScheduleGrid
 object to L<PostScript::Convert/psconvert> (instead of calling the
@@ -1286,7 +1298,7 @@ L<< http://github.com/madsen/postscript-schedulegrid >>.
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Christopher J. Madsen.
+This software is copyright (c) 2013 by Christopher J. Madsen.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
