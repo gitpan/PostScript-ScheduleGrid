@@ -39,10 +39,10 @@ my %WriteMakefileArgs = (
     'version' => '0.77'
   },
   'PREREQ_PM' => {
-    'Class::MOP' => '0',
     'DateTime' => '0',
     'DateTime::TimeZone' => '0',
     'List::Util' => '1.20',
+    'Module::Runtime' => '0',
     'Moose' => '0',
     'Moose::Role' => '0',
     'Moose::Util::TypeConstraints' => '0',
@@ -50,7 +50,7 @@ my %WriteMakefileArgs = (
     'MooseX::Types::DateTime' => '0',
     'MooseX::Types::Moose' => '0',
     'POSIX' => '0',
-    'PostScript::File' => '2.11',
+    'PostScript::File' => '2.20',
     'namespace::autoclean' => '0'
   },
   'TEST_REQUIRES' => {
